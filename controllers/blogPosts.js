@@ -1,4 +1,4 @@
-import BlogPost from "../models/BlogPost.js";
+import BlogPost from "../models/blogPost.js";
 
 export const createBlogPost = async (req, res) => {
   try {
@@ -6,10 +6,12 @@ export const createBlogPost = async (req, res) => {
       body: { author, title, content, cover },
     } = req;
     // console.log('my blog: '+req.json);
-    if (!author || !title || !content || !cover)
+    if (!title || !content )
       return res
         .status(400)
-        .json({ error: "Fields: author,title,content, and cover are all required!" });
+        .json({
+          error: "Fields title and content are required!",
+        });
 
     const blogPost = await BlogPost.create(req.body);
     res.json(blogPost);
@@ -46,10 +48,10 @@ export const updateBlog = async (req, res) => {
       body: { author, title, content, cover },
       params: { id },
     } = req;
-    if (!author || !title || !content || !cover)
+    if ( !title || !content )
       return res
         .status(400)
-        .json({ error: "author,title,content, and cover are all required!" });
+        .json({ error: "Fields title and content are required!" });
     const blog = await BlogPost.findByPk(id);
     if (!blog) return res.status(400).json({ error: "Blog not found!" });
     await blog.update(req.body);
