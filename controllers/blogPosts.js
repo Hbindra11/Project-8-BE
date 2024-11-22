@@ -5,7 +5,7 @@ export const createBlogPost = async (req, res) => {
     const {
       body: { author, title, content, cover },
     } = req;
-    // console.log('my blog: '+req.json);
+     console.log('my blog: '+req.json);
     if (!title || !content )
       return res
         .status(400)
