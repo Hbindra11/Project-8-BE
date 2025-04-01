@@ -1,6 +1,15 @@
 import { DataTypes } from "sequelize";
 import sequelize from "../db/index.js";
 
+/**
+ * Defines the BlogPost model.
+ * 
+ * @typedef {Object} BlogPost
+ * @property {string} author - The author of the blog post. Defaults to "Anonymous".
+ * @property {string} title - The title of the blog post. This field is required.
+ * @property {string} content - The content of the blog post. This field is required.
+ * @property {string} cover - The URL of the cover image for the blog post. Defaults to a placeholder image URL.
+ */
 const BlogPost = sequelize.define("BlogPost", {
   author: { type: DataTypes.STRING,  defaultValue: "Anonymous"},
   title: { type: DataTypes.TEXT, allowNull: false },

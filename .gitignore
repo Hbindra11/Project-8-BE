@@ -1,2 +1,5 @@
+# Ignore the node_modules directory, which contains dependencies
 node_modules/
+
+# Ignore all .env files, which may contain sensitive environment variables
 .env*
