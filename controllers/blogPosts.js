@@ -1,4 +1,4 @@
-import BlogPost from "../models/blogPost.js"; // Import the BlogPost model
+import BlogPost from "../models/BlogPost.js"; // Import the BlogPost model
 
 // Controller to create a new blog post
 export const createBlogPost = async (req, res) => {
