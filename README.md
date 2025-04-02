@@ -8,11 +8,11 @@ This backend API is designed to support the functionality of the Project 8 trave
 - Error handling and validation
 - Scalable and modular architecture
 - API endpoints for the posts resource:
-  - **GET /posts**:  Retrieve all posts.
-  - **GET /posts/:id**:  Retrieve a single post by ID.
-  - **POST /posts**:  Create a new post.
-  - **PUT /posts/:id**:  Update an existing post by ID.
-  - **DELETE /posts/:id**:  Delete a post by ID.
+  - **GET /blogPosts**:  Retrieve all posts.
+  - **GET /blogPosts/:id**:  Retrieve a single post by ID.
+  - **POST /blogPosts**:  Create a new post.
+  - **PUT /blogPosts/:id**:  Update an existing post by ID.
+  - **DELETE /blogPosts/:id**:  Delete a post by ID.
 
 ## Technologies Used
 - Node.js
